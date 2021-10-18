@@ -37,8 +37,6 @@ There are several ways for building multitarget applications in SAP Business App
     6.  Save your changes.
     Use the *Task Explorer* to change the default MTA Build options, for example, to change the default location of the MTA archive or to provide an MTA extension for the build. In the *Task Explorer*, you can save this build configuration for later use.
 
-    For more information, see [Task Explorer](Task_Explorer_1232c72.md).
-
 -   From the CLI. See [Cloud MTA Build Tool](https://sap.github.io/cloud-mta-build-tool/usage/).
 
 The terminal opens showing the output of the build. Once the build is complete, a folder named `mta_archives` is added to the project that contains the relevant MTA archive \(MTAR file\).
@@ -57,6 +55,8 @@ The terminal opens showing the output of the build. Once the build is complete, 
 -   You must have permissions to deploy to your Cloud Foundry space.
 -   Your dev space must contain a multitarget application.
 -   Your workspace must contain an MTA archive \(MTAR\) file.
+
+There are several ways for deploying multitarget applications to SAP Cloud Foundry:
 
 -   From the context menu.
     1.  Right-click on the relevant MTAR file.

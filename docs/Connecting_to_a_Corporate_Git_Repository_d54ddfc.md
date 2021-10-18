@@ -2,7 +2,7 @@
 
 # Connecting to a Corporate Git Repository
 
-As an administrator, you can work with on premise Git repositories once an appropriate destination has been created in your subaccount.
+As an administrator, you can work with on-premise Git repositories, once an appropriate destination has been created in your subaccount.
 
 
 
@@ -13,7 +13,7 @@ As an administrator, you can work with on premise Git repositories once an appro
 SAP Business Application Studio supports basic authentication, which means you must provide your username and password to access your Git provider.
 
 > ### Note:  
-> SSH is not available for on premise Git installations.
+> SSH is not available for on-premise Git installations.
 
 To work with the Git view in SAP Business Application Studio, you need to store or cache credentials. Once you have enabled one of these methods, you will not have to enter your credentials every time you use Git.
 
@@ -27,7 +27,10 @@ To work with the Git view in SAP Business Application Studio, you need to store 
 
 You can use a **Personal Access Token** \(PAT\) instead of a password.
 
-For example, you can create a PAT in GitHub following [these intructions](http://help.sap.com/disclaimer?site=https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token). Other Git providers will have different ways of creating PATs.
+For example, you can create a PAT in GitHub following [these instructions](http://help.sap.com/disclaimer?site=https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token). Other Git providers will have different ways of creating PATs.
+
+> ### Note:  
+> PATs are an alternative to using passwords for authentication to Git, and as such, they should be frequently renewed.
 
 
 
@@ -49,14 +52,14 @@ Make sure to use the exact same host and port as defined in the destination URL 
     <tr>
     <th>
 
-Field
+    Field
 
 
     
     </th>
     <th>
 
-Value
+    Value
 
 
     
@@ -65,30 +68,14 @@ Value
     <tr>
     <td>
 
- *Back-end Type* 
+     *Back-end Type* 
 
 
     
     </td>
     <td>
 
- *Non-SAP System* 
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td>
-
-*Protocol*
-
-
-    
-    </td>
-    <td>
-
- *HTTPS* 
+     *Non-SAP System* 
 
 
     
@@ -97,30 +84,14 @@ Value
     <tr>
     <td>
 
- *Internal Host / Port* 
+    *Protocol*
 
 
     
     </td>
     <td>
 
-Enter the internal host and port for your Git system.
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td>
-
- *Host / Port* 
-
-
-    
-    </td>
-    <td>
-
-Enter a virtual host and port for your Git system. You can use the same host and port as for the virtual host and port.
+     *HTTPS* 
 
 
     
@@ -129,34 +100,68 @@ Enter a virtual host and port for your Git system. You can use the same host and
     <tr>
     <td>
 
- *Principal Type* 
+     *Internal Host / Port* 
 
 
     
     </td>
     <td>
 
- *None* 
+    Enter the internal host and port for your Git system.
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td>
+
+     *Host / Port* 
+
+
+    
+    </td>
+    <td>
+
+    Enter a virtual host and port for your Git system. You can use the same host and port as for the virtual host and port.
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td>
+
+     *Principal Type* 
+
+
+    
+    </td>
+    <td>
+
+     *None* 
 
 
     
     </td>
     </tr>
     </table>
+    
+    For the system you just added, specify the resources to enable, using the following settings:
 
 
     <table>
     <tr>
     <th>
 
-Field
+    Field
 
 
     
     </th>
     <th>
 
-Value
+    Value
 
 
     
@@ -165,30 +170,14 @@ Value
     <tr>
     <td>
 
- *Enabled* 
+     *Enabled* 
 
 
     
     </td>
     <td>
 
-Checked
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td>
-
- *URL Path* 
-
-
-    
-    </td>
-    <td>
-
- ***/*** 
+    Checked
 
 
     
@@ -197,21 +186,37 @@ Checked
     <tr>
     <td>
 
- *Access Policy* 
+     *URL Path* 
 
 
     
     </td>
     <td>
 
- *Path and all sub-paths* 
+     ***/*** 
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td>
+
+     *Access Policy* 
+
+
+    
+    </td>
+    <td>
+
+     *Path and all sub-paths* 
 
 
     
     </td>
     </tr>
     </table>
-
+    
 3.  Upload your organization's Git server certificate to the cloud connector \(if your Git server is using certificate-based authentication\).
 4.  If you defined a custom identity provider, make sure that you have configured the assertion-based attributes mapping for this identity provider. For more information, see [Configure Trust to the SAML Identity Provider](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/dc618538d97610148155d97dcd123c24.html#loiob6cfc4bb4bff4ace90afc71b0962fcb5).
 5.  Define your corporate Git destination. For more information, see [Connect to ABAP Systems](https://help.sap.com/viewer/825270ffffe74d9f988a0f0066ad59f0/CF/en-US/5c3debce758a470e8342161457fd6f70.html).
@@ -225,14 +230,14 @@ Checked
         <tr>
         <th>
 
-Property
+        Property
 
 
         
         </th>
         <th>
 
-Value
+        Value
 
 
         
@@ -241,30 +246,14 @@ Value
         <tr>
         <td>
 
-WebIDEEnabled
+        WebIDEEnabled
 
 
         
         </td>
         <td>
 
-true
-
-
-        
-        </td>
-        </tr>
-        <tr>
-        <td>
-
-HTML5.DynamicDestination
-
-
-        
-        </td>
-        <td>
-
-true
+        true
 
 
         
@@ -273,24 +262,40 @@ true
         <tr>
         <td>
 
-HTML5.Timeout
-
-\(Optional property\)
+        HTML5.DynamicDestination
 
 
         
         </td>
         <td>
 
-60000
+        true
+
+
+        
+        </td>
+        </tr>
+        <tr>
+        <td>
+
+        HTML5.Timeout
+
+        \(Optional property\)
+
+
+        
+        </td>
+        <td>
+
+        60000
 
 
         
         </td>
         </tr>
         </table>
-
-        ![](images/Create_destination_for_Git_328ecee.png)
+        
+        ![Additional properties in Git destination creation](images/Create_destination_for_Git_328ecee.png)
 
 
 

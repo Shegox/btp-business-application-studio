@@ -4,7 +4,9 @@
 
 You can incorporate all the changes from one branch into another in a single commit.
 
-1.  From the *SOURE CONTROL: GIT* view menu, click More Actions.
+To merge a branch into another:
+
+1.  From the *SOURCE CONTROL: GIT* view menu, click More Actions.
 
     ![](images/Git_More_Actions_button_5a1fc7b.png)
 
@@ -12,5 +14,5 @@ You can incorporate all the changes from one branch into another in a single com
 3.  Select the branch you want to merge into the currently active branch.
 
 > ### Note:  
-> Merge operations can fail due to conflicts between the current branch and the branch you chose from which to incorporate the changes.
+> Merge operations can fail due to conflicts between the current branch and the branch you choose from which to incorporate the changes.
 

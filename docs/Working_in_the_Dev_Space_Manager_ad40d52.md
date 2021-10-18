@@ -16,7 +16,7 @@ You can generate a dev space to create and manage applications. You can select t
 2.  Click *Create Dev Space*.
 3.  Enter a name for the dev space.
 4.  Select the relevant application type.
-5.  \(Optional\) Select the relevant additional extensions to enhance your space.
+5.  \(Optional\) Select the relevant additional extensions to enhance your space. \(Don't worry, you can add extensions to your dev space later, see below.\)
 6.  Click *Create Dev Space*.
 
     > ### Note:  
@@ -24,7 +24,7 @@ You can generate a dev space to create and manage applications. You can select t
 
 
 > ### Note:  
-> The maximum size limit of the dev space is 6GB for productive accounts and 2GB for trial accounts. Exceeding this limit may cause loss of data and other problems, including the inability to start the dev space.
+> The maximum size limit of the dev space is 10 GB for productive accounts in the standard-edition plan, and 4 GB for trial accounts and accounts using the free plan. Exceeding this limit may cause loss of data and other problems, including the inability to start the dev space. Note that additional restrictions apply to dev spaces in trial accounts. See [Restrictions](Restrictions_a45742a.md).
 
 
 
@@ -36,8 +36,10 @@ If you don't need to work with your dev space for a while, you can stop your dev
 
 When you restart your stopped dev space, all content in your dev space, including files and settings, remain and will be available. If you want to apply updates to extensions and bug fixes, you must stop your dev space and start it again.
 
+You can also delete your dev space.
+
 > ### Note:  
-> By creating a dev space, you create a project and file system for yourself. If you delete your dev space, it can't be recovered. We recommend syncing, backing up, and saving your project to the Git Repository.
+> By creating a dev space, you create a project and file system for yourself. If you delete your dev space, it can't be recovered. We recommend syncing, backing up, and saving your project to a Git repository. See [Connect to Your Git Source Control System](Connect_to_Your_Git_Source_Control_System_e7a42bc.md).
 
 
 
@@ -59,6 +61,8 @@ To add extentions, the dev space must be in the stopped state.
 
 ## Download Dev Space Content
 
+You can download the dev space content in the following situations:
+
 -   When your dev space is in the *RUNNING* state to save the dev space contents.
 -   When your dev space is in the *ERROR* state to recover your data and move the contents to another dev space.
 
@@ -69,7 +73,7 @@ After the download begins, the dev space state changes to *STARTING*. The dev sp
 When the download is complete, the `tar` file appears, which contains the dev space content.
 
 > ### Note:  
-> After the dev space content is exported, check the total size of the dev space before uploading it to make sure that the size does not exceed 6GB.
+> After the dev space content is exported, check the total size of the dev space before uploading it to make sure that the size does not exceed 10 GB.
 
 
 
@@ -77,12 +81,19 @@ When the download is complete, the `tar` file appears, which contains the dev sp
 
 ## Import Dev Space Content
 
+After downloading the dev space content, you can import the content to another dev space by performing the following steps:
+
 1.  Create a new dev space and open it.
-2.  Open the project folder.
-3.  Select the project folder and click *File* \> *Upload Files*.
-4.  From the *Downloads* folder, choose the file with the dev space content.
-5.  Open the terminal.
-6.  Enter the following command to uncompress the uploaded file:
+2.  Click *Open Folder*.
+
+    The `user` folder is selected by default.
+
+3.  Click *Open*.
+4.  Click the `projects` folder to select it.
+5.  Click *File* \> *Upload Files*.
+6.  From the *Downloads* folder, choose the file with the dev space content.
+7.  Right-click the `projects` folder and select ***Open in Terminal***.
+8.  Enter the following command to uncompress the uploaded file:
 
     ```
     tar xvzf <yourFileName>.tar.gz

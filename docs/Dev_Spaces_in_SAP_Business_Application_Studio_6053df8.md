@@ -22,6 +22,8 @@ When creating a new dev space, select the dev space type that best fits the appl
 
 ## Configure Your Dev Space Settings
 
+You can configure your preferred settings for working in the dev space:
+
 1.  Open your dev space.
 2.  Go to *File* \> *Settings*.
 3.  Configure your settings:
@@ -35,11 +37,16 @@ When creating a new dev space, select the dev space type that best fits the appl
 
 You can create, delete, stop, and start dev spaces. You can also download dev space content, and import dev space content. See [Working in the Dev Space Manager](Working_in_the_Dev_Space_Manager_ad40d52.md).
 
+> ### Note:  
+> Dev spaces not used for more than 30 days are archived to save on disk space. You can still access them just like any other dev space, but they might take up to 1 minute longer to load.
+
 
 
 <a name="loio6053df8bca3946f098bc9f89e49d7317__Additional_Tools_section"/>
 
 ## Using Additional Tools
+
+It is possible to install additional tools on a dev space or consume additional software components for developing applications using the terminal, the dedicated UI, or directly in the code.
 
 > ### Note:  
 > SAP provides you with a mechanism to access third party sites to view and download open-source, 3rd party or its own tools, libraries, or software components \(“Extensions”\) to dev spaces in SAP Business Application Studio. Using this mechanism, you can view and install Extensions at your own risk.
@@ -54,10 +61,13 @@ You can create, delete, stop, and start dev spaces. You can also download dev sp
 > 
 > SAP may disable any dev space that includes Extensions that cause system malfunction or that SAP reasonably believes may cause harm to SAP systems.
 
--   **[Working in the Dev Space Manager](Working_in_the_Dev_Space_Manager_ad40d52.md)**  
+-   **[Working in the Dev Space Manager](Working_in_the_Dev_Space_Manager_ad40d52.md "You can create, delete, stop, and start dev spaces. You can also download dev space
+		content, and import dev space content.")**  
 You can create, delete, stop, and start dev spaces. You can also download dev space content, and import dev space content.
--   **[Dev Space Types](Dev_Space_Types_4142f78.md)**  
+-   **[Dev Space Types](Dev_Space_Types_4142f78.md "When creating a new dev space, select the dev space type that best fits the application
+		you want to create.")**  
 When creating a new dev space, select the dev space type that best fits the application you want to create.
--   **[Extending SAP Business Application Studio](Extending_SAP_Business_Application_Studio_f6681fa.md)**  
+-   **[Extending SAP Business Application Studio](Extending_SAP_Business_Application_Studio_f6681fa.md "Enrich the IDE with additional features and capabilities to make your development more
+		efficient.")**  
 Enrich the IDE with additional features and capabilities to make your development more efficient.
 

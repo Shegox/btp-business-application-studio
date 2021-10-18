@@ -10,7 +10,7 @@ For applications that do not need to run on Cloud Foundry, establish a connectio
 
 ## Context
 
-You can access on-premise SAP ABAP systems using a built-in Web Proxy. Your dev space includes a built-in Web Proxy \(http://localhost:8887\) that allows you access to on-premise systems. It is already configured with the HTTP\_PROXY and the HTTPS\_PROXY environment variables. The proxy requires destination configuration to your on-premise system from your Cloud Foundry Subaccount.
+You can access on-premise SAP ABAP systems using a built-in Web Proxy. Your dev space includes a built-in Web Proxy \(`http://localhost:8887`\) that allows you access to on-premise systems. It is already configured with the HTTP\_PROXY and the HTTPS\_PROXY environment variables. The proxy requires destination configuration to your on-premise system from your Cloud Foundry Subaccount.
 
 
 
@@ -27,16 +27,32 @@ You can access on-premise SAP ABAP systems using a built-in Web Proxy. Your dev 
 
     <table>
     <tr>
+    <th>
+
+    Property
+
+
+    
+    </th>
+    <th>
+
+    Value
+
+
+    
+    </th>
+    </tr>
+    <tr>
     <td>
 
-**`WebIDEEnabled`**
+    `WebIDEEnabled`
 
 
     
     </td>
     <td>
 
-`true`
+    `true`
 
 
     
@@ -45,38 +61,54 @@ You can access on-premise SAP ABAP systems using a built-in Web Proxy. Your dev 
     <tr>
     <td>
 
-**`HTML5.DynamicDestination`**
+    `HTML5.DynamicDestination`
 
 
     
     </td>
     <td>
 
-`true`
+    `true`
 
 
     
     </td>
     </tr>
     </table>
-
+    
 4.  Set the *WebIDEUsage* property for your destination type:
 
 
     <table>
     <tr>
+    <th>
+
+    Destination Type
+
+
+    
+    </th>
+    <th>
+
+    Properties
+
+
+    
+    </th>
+    </tr>
+    <tr>
     <td>
 
-**Service Catalog**
+    **Service Catalog**
 
 
     
     </td>
     <td>
 
-*WebIDEUsage* includes `odata_abap` and `dev_abap` \(to deploy\).
+    *WebIDEUsage* includes `odata_abap` and `dev_abap` \(to deploy\).
 
-See [Developing an SAP Fiori Application Based on an SAP S/4HANA System](https://help.sap.com/viewer/584e0bcbfd4a4aff91c815cefa0bce2d/Cloud/en-US/22f3401b2e464344943f2a6abf05d092.html).
+    See [Developing an SAP Fiori Application Based on an SAP S/4HANA System](https://help.sap.com/viewer/584e0bcbfd4a4aff91c815cefa0bce2d/Cloud/en-US/22f3401b2e464344943f2a6abf05d092.html).
 
 
     
@@ -85,16 +117,16 @@ See [Developing an SAP Fiori Application Based on an SAP S/4HANA System](https:/
     <tr>
     <td>
 
-**Service URL**
+    **Service URL**
 
 
     
     </td>
     <td>
 
-*WebIDEUsage* includes `odata_gen`. You can use the full URL option or not.
+    *WebIDEUsage* includes `odata_gen`. You can use the full URL option or not.
 
-See [Consume an OData Service](https://help.sap.com/viewer/584e0bcbfd4a4aff91c815cefa0bce2d/Cloud/en-US/ff9d287ba8ef4011baaad58d516dce3f.html).
+    See [Consume an OData Service](https://help.sap.com/viewer/584e0bcbfd4a4aff91c815cefa0bce2d/Cloud/en-US/ff9d287ba8ef4011baaad58d516dce3f.html).
 
 
     
@@ -103,33 +135,28 @@ See [Consume an OData Service](https://help.sap.com/viewer/584e0bcbfd4a4aff91c81
     <tr>
     <td>
 
-**SAP API Business Hub**
+    **SAP API Business Hub**
 
 
     
     </td>
     <td>
 
-*WebIDEUsage* includes `apihub_catalog` and `api_sandbox`.
+    *WebIDEUsage* includes `apihub_catalog` and `api_sandbox`.
 
-See [Run Your Application with the SAP API Business Hub](https://help.sap.com/viewer/584e0bcbfd4a4aff91c815cefa0bce2d/Cloud/en-US/54ce98a4f9cf454e8b18224623c00aba.html).
+    See [Run Your Application with the SAP API Business Hub](https://help.sap.com/viewer/584e0bcbfd4a4aff91c815cefa0bce2d/Cloud/en-US/54ce98a4f9cf454e8b18224623c00aba.html).
 
 
     
     </td>
     </tr>
     </table>
-
+    
 5.  If you are using an on-premise system:
 
     1.  Configure the Cloud Connector so that your system is correctly exposed. See [Cloud Connector](https://help.sap.com/viewer/cca91383641e40ffbe03bdc78f00f681/Cloud/en-US/e6c7616abb5710148cfcf3e75d96d596.html).
 
         If you don't have any Cloud Connector to use, you can set up a Cloud Connector on your local machine/VM by following [this tutorial](https://developers.sap.com/tutorials/cp-connectivity-install-cloud-connector.html).
-
-        > ### Note:  
-        > Some corporate proxies or network policies may block the Cloud Connector from connecting SAP Business Application Studio and the on-premise system. Make sure that you have an internet connection to the SAP Business Application Studio connectivity service host, to which you can connect your Cloud Connector.
-        > 
-        > To find the SAP Business Application Studio connectivity service host for your region, see [SAP Business Application Studio Availability](SAP_Business_Application_Studio_Availability_8509485.md).
 
     2.  Add a new property with *WebIDEEnabled* as the name and *true* as the value.
 

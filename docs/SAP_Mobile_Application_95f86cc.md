@@ -4,7 +4,9 @@
 
 The Mobile Development Kit \(MDK\) lets you customize, deploy, and manage your customized iOS and Android apps in the cloud.
 
-See, [Mobile Development Kit](https://help.sap.com/viewer/977416d43cd74bdc958289038749100e/latest/en-US/7e0c2c85748542ab9f3873f0b0400aa5.html).
+See, [Mobile Development Kit](https://help.sap.com/doc/f53c64b93e5140918d676b927a3cd65b/Cloud/en-US/docs-en/guides/getting-started/mdk/bas.html).
+
+The SAP Mobile Application scenario contains the following predefined extensions:
 
 -   **HTML5 Runner**
 
@@ -14,9 +16,11 @@ See, [Mobile Development Kit](https://help.sap.com/viewer/977416d43cd74bdc958289
 
 -   **Java Tools**
 
+    Allows you to develop and run Java applications. Includes debugging capabilities and enhanced code editors. The following tools will be installed as part of the extension:
+
     -   Java JDK V 8
 
-    -   Maven V 3.6.1
+    -   Maven V 3.8.1
 
     -   Tomcat V 9.0.33
 
